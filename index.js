@@ -26,16 +26,16 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation() {
-  // let count = 0; // create count, start at 0
-  // return function counter(){
-  //   return count++; // increase count by 1
-  //   return `Your ${number} count is ${count}`;
-  // }
+function summation(number) {
+  let count = 0;
+  for(let counter = number; counter > 0; counter -= 1){
+    count += counter;
+  }
+  return count;
 }
 
-// const counter1 = counterMaker();
- 
+// test
+// console.log(summation(4));
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
