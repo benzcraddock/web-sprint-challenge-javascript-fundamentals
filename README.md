@@ -26,13 +26,33 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
 
+.map is an advanced array method used for converting data. It automatically returns a new array and requires a return statement. The information following the return statement is pushed into the new array that is created. .map is used for extracting values from an array of an object.
+
+.reduce is also an advanced array method that returns a single value and has two required arguments in accumulator and item, both of which the callback function takes. .reduce also takes an initial value such as zero that indicates where to start the equation. .reduce is used for identifying a sum of values in an object array.
+
+.filter is an advanced array method that is used for filtering data. Like .map, it also automatically returns a new array and requires a return statement. However, for .filter, the return statement is the condition that indicates if true, the item will be included, if false, the item will be excluded. A use case for .filter is for filtering numbers in an array, or for filtering blog posts based on categories or tags on a web page.
+
 2. Explain the difference between a callback and a higher order function.
+
+A callback function is passed in to other functions as an argument, while a higher order function receives other functions as arguments.
 
 3. Explain what a closure is.
 
+Closure is when an inner function reaches into an outer function to grab a value defined in the outer function.
+
 4. Describe the four principles of the 'this' keyword.
 
+Window Binding - 'this' keyword will return the window or the global object in node, or undefined in 'strict mode.' Window is not a great practice as it reflects the global scope in the browser.
+
+Implicit Binding - 'this' refers to when the function is invoked, look to the left of the dot.
+
+New Binding - 'this' refers to when a function is invoked as a constructor function using the new keyword, 'this' points to the new object that is created.
+
+Explicit Binding - 'this' refers to when we explicitly assign the 'this' keyword using .call, .apply, or .bind. When exercising explicit binding, .bind does not immediately run a function tied to an object. Rather, it will bind 'this' to the object passed into the bind method and create a function to be invoked at a later time.
+
 5. Why do we need super() in an extended class?
+
+super() is necessary in an extended class because it allows us to inherit attributes from parent to child. Basically, it tells the parent's constructor function to be concerned with the child's attributes and abstracts away Object.create(this, Class) syntax that was previously used before Classes.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
