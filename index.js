@@ -17,9 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
-
-
+// nestedFunction can access the variable internal because of closure, even though it is not defined within nestedFunction. Inner functions like nestedFunction in this example will look outside and upwards of the scope chain and search for variables being referenced in the outer scope if that variable is not defined within the functions scope first. This is an example of closure.
 
 /* 🚀🚀🚀 Task 2: Counter 🚀🚀🚀 */
 /* Use summation to do the following:
@@ -28,10 +26,15 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
+function summation() {
+  // let count = 0; // create count, start at 0
+  // return function counter(){
+  //   return count++; // increase count by 1
+  //   return `Your ${number} count is ${count}`;
+  // }
+}
 
-  }
+// const counter1 = counterMaker();
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -55,11 +58,14 @@ const zooAnimals = [
   Use animalNames to populate and return the displayNames array with only the animal name and scientific name of each animal. 
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
-
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
   
+  function animalNames(array){
+    const displayNames = [];
+    array.forEach(item => displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`));
+    return displayNames;
+  }
+
+  console.log(animalNames(zooAnimals));
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
